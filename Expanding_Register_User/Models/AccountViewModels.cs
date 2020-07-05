@@ -79,6 +79,18 @@ namespace Expanding_Register_User.Models
         [Display(Name = "Confirm password")]
         [Compare("Password", ErrorMessage = "The password and confirmation password do not match.")]
         public string ConfirmPassword { get; set; }
+
+        //Step 2 As we have added First name and last name we need to include it in the view model 
+        // so that they appear on the form
+
+        [Required]
+        [Display(Name = "First name")]
+        public string FirstName { get; set; }
+
+        [Required]
+        [Display(Name = "Last name")]
+        public string LastName { get; set; }
+
     }
 
     public class ResetPasswordViewModel
